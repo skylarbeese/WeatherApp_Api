@@ -12,6 +12,7 @@ function App() {
   if(ev.key === 'Enter') {
     
     //  if(query !== '' && query.toLowerCase().indexOf( query.toLowerCase() ) === -1) {
+      ev.preventDefault()
         fetch(`${Api.base}weather?q=${query}&units=metric&APPID=${Api.key}`)
         .then(res => res.json())
         .then(result => {
