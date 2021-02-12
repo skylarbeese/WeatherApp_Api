@@ -44,7 +44,7 @@ function App() {
    
    
      <main className={(typeof weather.main !=  'undefined') ? ((weather.main.temp > 4) ?  'warm'
-: 'cold') : ''}>
+: 'cold') : 'con'}>
        <div className="search-bar-con">
          <input className="search-bar" 
          type="text" name="search" 
@@ -74,7 +74,24 @@ function App() {
           </div>
  
        </div>
- : ('')}
+ : (
+  <div className="loc-con">
+  <div className="location">
+   
+    <div className="loc"> Search for a city</div>
+    <div className="date">{dateBuilder(new Date())}</div>
+  </div>
+  <div className="weather-con">
+  
+
+    <div className="weather-descript">
+     
+    </div>
+   </div>
+
+</div>
+ )}
+ 
      </main>
    
   );
